@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vehiculos;
+
+/**
+ *
+ * @author Manuel
+ */
+public class Automovil extends Vehiculo {
+    private int puestos;
+    private static int totalAutomovil;
+
+    public int getPuestos() {
+        return puestos;
+    }
+
+    public void setPuestos(int puestos) {
+        this.puestos = puestos;
+    }
+    public static int getTotalAutomovil() {
+        return totalAutomovil;
+    }
+
+    public static void setTotalAutomovil(int totalAutomovil) {
+        Automovil.totalAutomovil = totalAutomovil;
+    }
+    public Automovil (String placa,String nombre,int precio,int peso,Fabricante fabricante, int puestos) {
+        super(placa,4,100,nombre,precio,peso,"FWD",fabricante);
+        this.setPuestos(puestos);
+        totalAutomovil++;
+    }
+}
